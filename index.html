@@ -51,19 +51,19 @@
 
   <meta
     property="og:image"
-    content="https://fridaluis.github.io/invitacion/preview-whatsapp-v2.png"
+    content="https://fridaluis.github.io/invitacion/preview-whatsapp-v3.jpg"
   >
 
 
   <meta
     property="og:image:secure_url"
-    content="https://fridaluis.github.io/invitacion/preview-whatsapp-v2.png"
+    content="https://fridaluis.github.io/invitacion/preview-whatsapp-v3.jpg"
   >
 
 
   <meta
     property="og:image:type"
-    content="image/png"
+    content="image/jpeg"
   >
 
 
@@ -110,13 +110,13 @@
 
   <meta
     name="twitter:image"
-    content="https://fridaluis.github.io/invitacion/preview-whatsapp-v2.png"
+    content="https://fridaluis.github.io/invitacion/preview-whatsapp-v3.jpg"
   >
 
 
 
   <!-- ==================================================
-       PANTALLA LIMPIA DURANTE LA REDIRECCIÓN
+       PANTALLA VACÍA DURANTE LA REDIRECCIÓN
        ================================================== -->
 
   <style>
@@ -178,18 +178,18 @@
 
 
     /*
-      REDIRECCIÓN INMEDIATA
+      REDIRECCIÓN INMEDIATA.
 
-      Solo utilizamos el parámetro "codigo".
+      Solo tomamos el parámetro "codigo".
 
-      Cualquier parámetro extra como:
-      &v=5
-      &v=6
-      &prueba=1
+      Parámetros adicionales como:
+      &v=7
+      &v=8
+      &prueba=123
 
-      sirve para generar una URL distinta
-      para WhatsApp, pero NO se envía
-      a Apps Script ni altera la invitación.
+      sirven para obligar a WhatsApp
+      a revisar nuevamente la URL,
+      pero NO modifican la invitación.
     */
 
     window.location.replace(
@@ -207,8 +207,9 @@
   <!--
     VACÍO INTENCIONALMENTE.
 
-    Mientras GitHub redirige a Apps Script,
-    únicamente aparece el fondo limpio.
+    Durante el salto de GitHub Pages
+    a Google Apps Script no mostramos
+    ningún texto ni botón.
   -->
 
 </body>
