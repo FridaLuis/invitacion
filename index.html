@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+
+  <!-- ==========================================
+       PREVIEW PARA WHATSAPP / REDES
+       ========================================== -->
+
+  <title>
+    Frida + José Luis | Boda civil + Baby Shower
+  </title>
+
+
+  <meta
+    name="description"
+    content="Nos encantará compartir este día tan especial contigo ♡"
+  >
+
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+
+  <meta
+    property="og:title"
+    content="Frida + José Luis ♡"
+  >
+
+
+  <meta
+    property="og:description"
+    content="Boda civil + Baby Shower · 3 de octubre de 2026"
+  >
+
+
+  <meta
+    property="og:image"
+    content="https://fridaluis.github.io/invitacion/preview.png"
+  >
+
+
+  <meta
+    property="og:image:width"
+    content="1200"
+  >
+
+
+  <meta
+    property="og:image:height"
+    content="630"
+  >
+
+
+  <meta
+    property="og:image:type"
+    content="image/png"
+  >
+
+
+  <meta
+    property="og:url"
+    content="https://fridaluis.github.io/invitacion/"
+  >
+
+
+  <!-- ==========================================
+       COMPATIBILIDAD ADICIONAL
+       ========================================== -->
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+
+  <meta
+    name="twitter:title"
+    content="Frida + José Luis ♡"
+  >
+
+
+  <meta
+    name="twitter:description"
+    content="Boda civil + Baby Shower · 3 de octubre de 2026"
+  >
+
+
+  <meta
+    name="twitter:image"
+    content="https://fridaluis.github.io/invitacion/preview.png"
+  >
+
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      min-height: 100%;
+    }
+
+
+    body {
+      min-height: 100vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background: #f4f1ec;
+
+      color: #3d3b3a;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      text-align: center;
+    }
+
+
+    .mensaje {
+      padding: 30px;
+    }
+
+
+    .mensaje p {
+      margin: 0;
+
+      font-size: 18px;
+
+      font-style: italic;
+
+      letter-spacing: 0.08em;
+    }
+
+
+    .mensaje a {
+      display: inline-block;
+
+      margin-top: 22px;
+
+      color: #3d3b3a;
+
+      font-family:
+        Arial,
+        sans-serif;
+
+      font-size: 12px;
+
+      font-weight: bold;
+
+      letter-spacing: 0.16em;
+
+      text-transform: uppercase;
+
+      text-decoration: underline;
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <div class="mensaje">
+
+    <p>
+      Abriendo invitación…
+    </p>
+
+    <a
+      id="enlaceManual"
+      href="#"
+    >
+      ABRIR INVITACIÓN
+    </a>
+
+  </div>
+
+
+
+  <script>
+
+    const BASE_INVITACION =
+      "https://script.google.com/macros/s/AKfycbyOuRU9lA8Eg-kt_YCrPn6hnU4MJFP_do8alDYt_pno1fK86ppHO_MmBnu-ZstO7Y7T/exec";
+
+
+    const parametros =
+      new URLSearchParams(
+        window.location.search
+      );
+
+
+    const codigo =
+      parametros.get(
+        "codigo"
+      );
+
+
+    let destino =
+      BASE_INVITACION;
+
+
+    if (codigo) {
+
+      destino +=
+        "?codigo=" +
+        encodeURIComponent(
+          codigo
+        );
+
+    }
+
+
+    document
+      .getElementById(
+        "enlaceManual"
+      )
+      .href =
+        destino;
+
+
+    /*
+      IMPORTANTE:
+
+      La redirección es con JavaScript y NO con
+      meta refresh.
+
+      Así WhatsApp puede leer primero
+      la portada, título y descripción de esta página.
+    */
+
+    setTimeout(
+      function () {
+
+        window.location.replace(
+          destino
+        );
+
+      },
+      350
+    );
+
+  </script>
+
+
+</body>
+
+</html>
