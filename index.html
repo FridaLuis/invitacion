@@ -51,7 +51,19 @@
 
   <meta
     property="og:image"
-    content="https://fridaluis.github.io/invitacion/preview-whatsapp.png"
+    content="https://fridaluis.github.io/invitacion/preview-whatsapp-v2.png"
+  >
+
+
+  <meta
+    property="og:image:secure_url"
+    content="https://fridaluis.github.io/invitacion/preview-whatsapp-v2.png"
+  >
+
+
+  <meta
+    property="og:image:type"
+    content="image/png"
   >
 
 
@@ -68,14 +80,8 @@
 
 
   <meta
-    property="og:image:type"
-    content="image/png"
-  >
-
-
-  <meta
-    property="og:url"
-    content="https://fridaluis.github.io/invitacion/"
+    property="og:image:alt"
+    content="Frida + José Luis · Boda civil + Baby Shower"
   >
 
 
@@ -104,7 +110,7 @@
 
   <meta
     name="twitter:image"
-    content="https://fridaluis.github.io/invitacion/preview-whatsapp.png"
+    content="https://fridaluis.github.io/invitacion/preview-whatsapp-v2.png"
   >
 
 
@@ -174,9 +180,16 @@
     /*
       REDIRECCIÓN INMEDIATA
 
-      El body queda completamente vacío
-      para que durante el salto a Apps Script
-      no aparezca ningún texto ni botón.
+      Solo utilizamos el parámetro "codigo".
+
+      Cualquier parámetro extra como:
+      &v=5
+      &v=6
+      &prueba=1
+
+      sirve para generar una URL distinta
+      para WhatsApp, pero NO se envía
+      a Apps Script ni altera la invitación.
     */
 
     window.location.replace(
@@ -192,7 +205,10 @@
 <body>
 
   <!--
-    VACÍO INTENCIONALMENTE
+    VACÍO INTENCIONALMENTE.
+
+    Mientras GitHub redirige a Apps Script,
+    únicamente aparece el fondo limpio.
   -->
 
 </body>
