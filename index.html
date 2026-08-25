@@ -11,9 +11,9 @@
   >
 
 
-  <!-- ==========================================
+  <!-- ==================================================
        PREVIEW PARA WHATSAPP / REDES
-       ========================================== -->
+       ================================================== -->
 
   <title>
     Frida + José Luis | Boda civil + Baby Shower
@@ -74,9 +74,10 @@
   >
 
 
-  <!-- ==========================================
+
+  <!-- ==================================================
        COMPATIBILIDAD ADICIONAL
-       ========================================== -->
+       ================================================== -->
 
   <meta
     name="twitter:card"
@@ -102,103 +103,32 @@
   >
 
 
+
+  <!-- ==================================================
+       PANTALLA TOTALMENTE LIMPIA DURANTE LA REDIRECCIÓN
+       ================================================== -->
+
   <style>
-
-    * {
-      box-sizing: border-box;
-    }
-
 
     html,
     body {
       margin: 0;
       width: 100%;
-      min-height: 100%;
+      height: 100%;
+      background: #f4f1ec;
     }
-
 
     body {
-      min-height: 100vh;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      background: #f4f1ec;
-
-      color: #3d3b3a;
-
-      font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-      text-align: center;
-    }
-
-
-    .mensaje {
-      padding: 30px;
-    }
-
-
-    .mensaje p {
-      margin: 0;
-
-      font-size: 18px;
-
-      font-style: italic;
-
-      letter-spacing: 0.08em;
-    }
-
-
-    .mensaje a {
-      display: inline-block;
-
-      margin-top: 22px;
-
-      color: #3d3b3a;
-
-      font-family:
-        Arial,
-        sans-serif;
-
-      font-size: 12px;
-
-      font-weight: bold;
-
-      letter-spacing: 0.16em;
-
-      text-transform: uppercase;
-
-      text-decoration: underline;
+      overflow: hidden;
     }
 
   </style>
 
-</head>
 
 
-<body>
-
-
-  <div class="mensaje">
-
-    <p>
-      Abriendo invitación…
-    </p>
-
-    <a
-      id="enlaceManual"
-      href="#"
-    >
-      ABRIR INVITACIÓN
-    </a>
-
-  </div>
-
-
+  <!-- ==================================================
+       REDIRECCIÓN INMEDIATA
+       ================================================== -->
 
   <script>
 
@@ -233,37 +163,31 @@
     }
 
 
-    document
-      .getElementById(
-        "enlaceManual"
-      )
-      .href =
-        destino;
-
-
     /*
-      IMPORTANTE:
+      REDIRECCIÓN INMEDIATA.
 
-      La redirección es con JavaScript y NO con
-      meta refresh.
-
-      Así WhatsApp puede leer primero
-      la portada, título y descripción de esta página.
+      No esperamos 350 ms
+      y no renderizamos ningún mensaje.
     */
 
-    setTimeout(
-      function () {
-
-        window.location.replace(
-          destino
-        );
-
-      },
-      350
+    window.location.replace(
+      destino
     );
 
   </script>
 
+</head>
+
+
+
+<body>
+
+  <!--
+    INTENCIONALMENTE VACÍO.
+
+    Mientras ocurre la redirección,
+    solamente se ve el fondo limpio.
+  -->
 
 </body>
 
