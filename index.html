@@ -12,7 +12,7 @@
 
 
   <!-- ==================================================
-       PREVIEW PARA WHATSAPP / REDES
+       TÍTULO DEL SITIO
        ================================================== -->
 
   <title>
@@ -22,9 +22,14 @@
 
   <meta
     name="description"
-    content="Nos encantará compartir este día tan especial contigo ♡"
+    content="Nos encantará compartir este día tan especial contigo."
   >
 
+
+
+  <!-- ==================================================
+       PREVIEW PARA WHATSAPP / FACEBOOK / REDES
+       ================================================== -->
 
   <meta
     property="og:type"
@@ -34,7 +39,7 @@
 
   <meta
     property="og:title"
-    content="Frida + José Luis ♡"
+    content="Frida + José Luis"
   >
 
 
@@ -46,19 +51,19 @@
 
   <meta
     property="og:image"
-    content="https://fridaluis.github.io/invitacion/preview.png"
+    content="https://fridaluis.github.io/invitacion/preview-whatsapp.png"
   >
 
 
   <meta
     property="og:image:width"
-    content="1200"
+    content="1080"
   >
 
 
   <meta
     property="og:image:height"
-    content="630"
+    content="1080"
   >
 
 
@@ -87,7 +92,7 @@
 
   <meta
     name="twitter:title"
-    content="Frida + José Luis ♡"
+    content="Frida + José Luis"
   >
 
 
@@ -99,13 +104,13 @@
 
   <meta
     name="twitter:image"
-    content="https://fridaluis.github.io/invitacion/preview.png"
+    content="https://fridaluis.github.io/invitacion/preview-whatsapp.png"
   >
 
 
 
   <!-- ==================================================
-       PANTALLA TOTALMENTE LIMPIA DURANTE LA REDIRECCIÓN
+       PANTALLA LIMPIA DURANTE LA REDIRECCIÓN
        ================================================== -->
 
   <style>
@@ -113,10 +118,13 @@
     html,
     body {
       margin: 0;
+
       width: 100%;
       height: 100%;
+
       background: #f4f1ec;
     }
+
 
     body {
       overflow: hidden;
@@ -127,7 +135,7 @@
 
 
   <!-- ==================================================
-       REDIRECCIÓN INMEDIATA
+       REDIRECCIÓN A LA INVITACIÓN REAL
        ================================================== -->
 
   <script>
@@ -164,10 +172,11 @@
 
 
     /*
-      REDIRECCIÓN INMEDIATA.
+      REDIRECCIÓN INMEDIATA
 
-      No esperamos 350 ms
-      y no renderizamos ningún mensaje.
+      El body queda completamente vacío
+      para que durante el salto a Apps Script
+      no aparezca ningún texto ni botón.
     */
 
     window.location.replace(
@@ -183,10 +192,7 @@
 <body>
 
   <!--
-    INTENCIONALMENTE VACÍO.
-
-    Mientras ocurre la redirección,
-    solamente se ve el fondo limpio.
+    VACÍO INTENCIONALMENTE
   -->
 
 </body>
