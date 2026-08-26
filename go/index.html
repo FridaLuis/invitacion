@@ -1,1 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+
+  <!-- ==================================================
+       TÍTULO
+       ================================================== -->
+
+  <title>
+    Frida + José Luis | Boda civil + Baby Shower
+  </title>
+
+
+  <meta
+    name="description"
+    content="Nos encantará compartir este día tan especial contigo."
+  >
+
+
+
+  <!-- ==================================================
+       PREVIEW WHATSAPP / REDES
+       ================================================== -->
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+
+  <meta
+    property="og:title"
+    content="Frida + José Luis"
+  >
+
+
+  <meta
+    property="og:description"
+    content="Boda civil + Baby Shower · 3 de octubre de 2026"
+  >
+
+
+  <meta
+    property="og:image"
+    content="https://fridaluis.github.io/invitacion/preview-wa-final.jpg"
+  >
+
+
+  <meta
+    property="og:image:secure_url"
+    content="https://fridaluis.github.io/invitacion/preview-wa-final.jpg"
+  >
+
+
+  <meta
+    property="og:image:type"
+    content="image/jpeg"
+  >
+
+
+  <meta
+    property="og:image:width"
+    content="1080"
+  >
+
+
+  <meta
+    property="og:image:height"
+    content="1080"
+  >
+
+
+  <meta
+    property="og:image:alt"
+    content="Frida + José Luis"
+  >
+
+
+
+  <!-- ==================================================
+       COMPATIBILIDAD ADICIONAL
+       ================================================== -->
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+
+  <meta
+    name="twitter:title"
+    content="Frida + José Luis"
+  >
+
+
+  <meta
+    name="twitter:description"
+    content="Boda civil + Baby Shower · 3 de octubre de 2026"
+  >
+
+
+  <meta
+    name="twitter:image"
+    content="https://fridaluis.github.io/invitacion/preview-wa-final.jpg"
+  >
+
+
+
+  <!-- ==================================================
+       PANTALLA VACÍA DURANTE REDIRECCIÓN
+       ================================================== -->
+
+  <style>
+
+    html,
+    body {
+      margin: 0;
+
+      width: 100%;
+      height: 100%;
+
+      background: #f4f1ec;
+    }
+
+
+    body {
+      overflow: hidden;
+    }
+
+  </style>
+
+
+
+  <!-- ==================================================
+       REDIRECCIÓN A APPS SCRIPT
+       ================================================== -->
+
+  <script>
+
+    const BASE_INVITACION =
+      "https://script.google.com/macros/s/AKfycbyOuRU9lA8Eg-kt_YCrPn6hnU4MJFP_do8alDYt_pno1fK86ppHO_MmBnu-ZstO7Y7T/exec";
+
+
+    const parametros =
+      new URLSearchParams(
+        window.location.search
+      );
+
+
+    const codigo =
+      parametros.get(
+        "codigo"
+      );
+
+
+    let destino =
+      BASE_INVITACION;
+
+
+    if (codigo) {
+
+      destino +=
+        "?codigo=" +
+        encodeURIComponent(
+          codigo
+        );
+
+    }
+
+
+    window.location.replace(
+      destino
+    );
+
+  </script>
+
+</head>
+
+
+<body>
+
+  <!-- VACÍO INTENCIONALMENTE -->
+
+</body>
+
+</html>
