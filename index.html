@@ -28,7 +28,7 @@
 
 
   <!-- ==================================================
-       PREVIEW PARA WHATSAPP / FACEBOOK / REDES
+       PREVIEW PARA WHATSAPP / REDES
        ================================================== -->
 
   <meta
@@ -51,13 +51,13 @@
 
   <meta
     property="og:image"
-    content="https://fridaluis.github.io/invitacion/preview-whatsapp-v3.jpg"
+    content="https://fridaluis.github.io/invitacion/preview-wa-final.jpg"
   >
 
 
   <meta
     property="og:image:secure_url"
-    content="https://fridaluis.github.io/invitacion/preview-whatsapp-v3.jpg"
+    content="https://fridaluis.github.io/invitacion/preview-wa-final.jpg"
   >
 
 
@@ -110,7 +110,7 @@
 
   <meta
     name="twitter:image"
-    content="https://fridaluis.github.io/invitacion/preview-whatsapp-v3.jpg"
+    content="https://fridaluis.github.io/invitacion/preview-wa-final.jpg"
   >
 
 
@@ -180,16 +180,15 @@
     /*
       REDIRECCIÓN INMEDIATA.
 
-      Solo tomamos el parámetro "codigo".
+      Solo tomamos "codigo".
 
-      Parámetros adicionales como:
-      &v=7
-      &v=8
-      &prueba=123
+      Los parámetros extra como:
+      &v=10
+      &v=11
+      etc.
 
-      sirven para obligar a WhatsApp
-      a revisar nuevamente la URL,
-      pero NO modifican la invitación.
+      sirven para evitar caché de WhatsApp
+      y NO alteran la invitación.
     */
 
     window.location.replace(
@@ -201,16 +200,9 @@
 </head>
 
 
-
 <body>
 
-  <!--
-    VACÍO INTENCIONALMENTE.
-
-    Durante el salto de GitHub Pages
-    a Google Apps Script no mostramos
-    ningún texto ni botón.
-  -->
+  <!-- VACÍO INTENCIONALMENTE -->
 
 </body>
 
