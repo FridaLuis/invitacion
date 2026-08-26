@@ -1,0 +1,294 @@
+
+
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>
+    Prueba Instagram
+  </title>
+
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    html,
+    body {
+      margin: 0;
+
+      min-height: 100%;
+
+      background:
+        #f4f1ec;
+
+      color:
+        #3d3b3a;
+
+      font-family:
+        Arial,
+        sans-serif;
+    }
+
+
+    body {
+      min-height: 100svh;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 30px;
+    }
+
+
+    .contenedor {
+      width: 100%;
+
+      max-width: 420px;
+
+      text-align: center;
+    }
+
+
+    h1 {
+      margin:
+        0
+        0
+        15px;
+
+      font-size: 22px;
+
+      letter-spacing: .15em;
+    }
+
+
+    p {
+      margin:
+        0
+        0
+        25px;
+
+      line-height: 1.5;
+    }
+
+
+    input {
+      width: 100%;
+
+      padding: 15px;
+
+      margin-bottom: 18px;
+
+      border:
+        1px solid
+        #3d3b3a;
+
+      border-radius: 0;
+
+      background:
+        transparent;
+
+      font-size: 16px;
+    }
+
+
+    button {
+      width: 100%;
+
+      padding: 15px;
+
+      border:
+        1px solid
+        #3d3b3a;
+
+      border-radius: 0;
+
+      background:
+        transparent;
+
+      color:
+        #3d3b3a;
+
+      font-weight: bold;
+
+      font-size: 15px;
+
+      letter-spacing: .12em;
+    }
+
+
+    #estado {
+      margin-top: 25px;
+
+      font-size: 18px;
+
+      min-height: 30px;
+    }
+
+
+    iframe {
+      display: none;
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+
+  <div class="contenedor">
+
+
+    <h1>
+      PRUEBA INSTAGRAM
+    </h1>
+
+
+    <p>
+      Si puedes ver esta pantalla,
+      GitHub ya funciona dentro de Instagram.
+    </p>
+
+
+    <form
+      id="formulario"
+      action="https://script.google.com/macros/s/AKfycbyOuRU9lA8Eg-kt_YCrPn6hnU4MJFP_do8alDYt_pno1fK86ppHO_MmBnu-ZstO7Y7T/exec"
+      method="POST"
+      target="respuestaOculta"
+    >
+
+
+      <input
+        type="hidden"
+        name="accion"
+        value="prueba_instagram"
+      >
+
+
+      <input
+        type="text"
+        name="mensaje"
+        value="Hola desde Instagram"
+        required
+      >
+
+
+      <button
+        id="boton"
+        type="submit"
+      >
+        ENVIAR PRUEBA
+      </button>
+
+
+    </form>
+
+
+    <div id="estado"></div>
+
+
+    <iframe
+      id="respuestaOculta"
+      name="respuestaOculta"
+    ></iframe>
+
+
+  </div>
+
+
+
+<script>
+
+
+  const formulario =
+    document.getElementById(
+      "formulario"
+    );
+
+
+  const boton =
+    document.getElementById(
+      "boton"
+    );
+
+
+  const estado =
+    document.getElementById(
+      "estado"
+    );
+
+
+  formulario.addEventListener(
+    "submit",
+    function () {
+
+      boton.disabled =
+        true;
+
+
+      estado.textContent =
+        "Enviando...";
+
+    }
+  );
+
+
+  window.addEventListener(
+    "message",
+    function (evento) {
+
+      if (
+        !evento.data ||
+        evento.data.origen !==
+          "prueba-instagram"
+      ) {
+        return;
+      }
+
+
+      if (
+        evento.data.ok
+      ) {
+
+        estado.textContent =
+          "✅ Llegó a Google Sheets";
+
+
+        boton.disabled =
+          false;
+
+
+        boton.textContent =
+          "PRUEBA COMPLETADA";
+
+      }
+
+    }
+  );
+
+
+</script>
+
+
+</body>
+
+</html>
+
+  
